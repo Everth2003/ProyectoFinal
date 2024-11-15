@@ -1,0 +1,48 @@
+<div    class="container">
+    <h2>Lista de Registros</h2>
+   <!-- Botón para abrir el modal de creación de estudiante con icono -->
+  <button  class="btn btn-primary mb-3 me-2" (click)="abrirModalCrearRegistro()">
+    <i class="bi bi-person-plus"></i> <!-- Icono de Bootstrap Icons -->
+    Crear Resgistro de Equipo
+  </button>
+  
+    <table class="table table-striped" *ngIf="registros && registros.length > 0; else noRegistros">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Fecha Ingreso</th>
+          <th>Fecha Salida</th>
+          <th>Estudiante</th>
+          <th>Vigilante</th>
+          <th>Equipo</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let registro of registros">
+          <td>{{ registro.id }}</td>
+          <td>{{ registro.fechaIngreso }}</td>
+          <td>{{ registro.fechaSalida}}</td>
+          <td>{{ registro.Estudiante.persona?.nombres }}</td>
+          <td>{{ registro.Vigilante.persona?.nombres }}</td>
+          <td>{{ registro.Objeto.nombre}}</td>
+    
+          <td>
+            <button (click)="abrirModalActualizarRegistro(registro)" class="btn btn-warning me-2">
+              <i class="bi bi-pencil"></i> <!-- Icono de lápiz para actualizar -->
+            </button>
+            
+            <!-- Botón de eliminar con icono -->
+            <button (click)="confirmDelete(registro.id)" class="btn btn-danger">
+              <i class="bi bi-trash"></i> <!-- Icono de basura para eliminar -->
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <ng-template #noRegistros>
+      <p>No hay registros disponibles.</p>
+    </ng-template>
+  
+  </div>
+  

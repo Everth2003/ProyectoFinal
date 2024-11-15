@@ -1,0 +1,287 @@
+<aside class="app-sidebar bg-body-secondary shadow" data-bs-theme="dark"> <!--begin::Sidebar Brand-->
+    <div class="sidebar-brand"> <!--begin::Brand Link-->
+        <a href="./index.html" class="brand-link"> <!--begin::Brand Image-->
+            <img src="" alt="" class="brand-image opacity-75 shadow">
+            <!--end::Brand Image-->
+            <!--begin::Brand Text--> <span class="brand-text fw-light">SREE UNIGUAJIRA</span> <!--end::Brand Text-->
+        </a> <!--end::Brand Link-->
+    </div> <!--end::Sidebar Brand--> 
+    <!--begin::Sidebar Wrapper-->
+    <div class="sidebar-wrapper">
+        <nav class="mt-2"> <!--begin::Sidebar Menu-->
+            <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu" data-accordion="false">
+                <li class="nav-item menu-open">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon bi bi-gear"></i>
+                        <p>Administrar
+                            <i class="nav-arrow bi bi-chevron-right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview"> <!-- Menú desplegable -->
+                        <li class="nav-item"> 
+                            <a [routerLink]='["inicio"]' class="nav-link" active>
+                                <i class="nav-icon bi bi-house"></i>
+                                <p>Inicio</p>
+                            </a>
+                        </li>
+                        
+                        <!-- Submenú Estudiantes -->
+                        <li class="nav-item"> 
+                            <a href="#" class="nav-link" active data-bs-toggle="collapse" data-bs-target="#submenu-estudiantes" aria-expanded="false" aria-controls="submenu-estudiantes">
+                                <i class="nav-icon bi bi-people"></i>
+                                <p>Estudiantes
+                                    <i class="nav-arrow bi bi-chevron-right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview collapse" id="submenu-estudiantes"> 
+                                <li class="nav-item">
+                                    <a [routerLink]='["crear-estudiante"]' class="nav-link">
+                                        <i class="nav-icon bi bi-person-plus"></i>
+                                        <p>Crear Estudiante</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]='["mostrar-estudiantes"]' class="nav-link">
+                                        <i class="nav-icon bi bi-eye"></i>
+                                        <p>Mostrar Estudiantes</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]='["actualizar-estudiante"]' class="nav-link">
+                                        <i class="nav-icon bi bi-pencil-square"></i>
+                                        <p>Actualizar Estudiante</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]='["eliminar-estudiante"]' class="nav-link">
+                                        <i class="nav-icon bi bi-trash"></i>
+                                        <p>Eliminar Estudiante</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Submenú Vigilantes -->
+                        <li class="nav-item"> 
+                            <a href="#" class="nav-link" data-bs-toggle="collapse" data-bs-target="#submenu-vigilantes" aria-expanded="false" aria-controls="submenu-vigilantes">
+                                <i class="nav-icon bi bi-shield-lock"></i>
+                                <p>Vigilantes
+                                    <i class="nav-arrow bi bi-chevron-right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview collapse" id="submenu-vigilantes"> 
+                                <li class="nav-item">
+                                    <a [routerLink]='["crear-vigilantes"]' class="nav-link">
+                                        <i class="nav-icon bi bi-shield-plus"></i>
+                                        <p>Crear Vigilante</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]='["mostrar-vigilantes"]' class="nav-link">
+                                        <i class="nav-icon bi bi-eye"></i>
+                                        <p>Mostrar Vigilantes</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]='["actualizar-vigilantes"]' class="nav-link">
+                                        <i class="nav-icon bi bi-pencil-square"></i>
+                                        <p>Actualizar Vigilante</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]='["eliminar-vigilante"]' class="nav-link">
+                                        <i class="nav-icon bi bi-trash"></i>
+                                        <p>Eliminar Vigilante</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                             <!-- Submenú Equipo -->
+                        <li class="nav-item"> 
+                            <a href="#" class="nav-link" data-bs-toggle="collapse" data-bs-target="#submenu-objeto" aria-expanded="false" aria-controls="submenu-objeto">
+                                <i class="nav-icon bi bi-laptop"></i>
+                                <p>Equipo
+                                    <i class="nav-arrow bi bi-chevron-right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview collapse" id="submenu-registro-ingreso"> 
+                                <li class="nav-item">
+                                    <a [routerLink]='["crear-objeto"]' class="nav-link">
+                                        <i class="nav-icon bi bi-plus-circle"></i>
+                                        <p>Crear Equipo</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]='["mostrar-objeto"]' class="nav-link">
+                                        <i class="nav-icon bi bi-eye"></i>
+                                        <p>Mostrar Equipos</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]='["actualizar-objeto"]' class="nav-link">
+                                        <i class="nav-icon bi bi-pencil-square"></i>
+                                        <p>Actualizar Equipo</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]='["eliminar-objeto"]' class="nav-link">
+                                        <i class="nav-icon bi bi-trash"></i>
+                                        <p>Eliminar Equipo</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                         <!-- Submenú Punto Control -->
+                         <li class="nav-item"> 
+                            <a href="#" class="nav-link" data-bs-toggle="collapse" data-bs-target="#submenu-punto-control" aria-expanded="false" aria-controls="submenu-punto-control">
+                                <i class="nav-icon bi bi-pin-map"></i>
+                                <p>Punto Control
+                                    <i class="nav-arrow bi bi-chevron-right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview collapse" id="submenu-punto-control"> 
+                                <li class="nav-item">
+                                    <a [routerLink]='["crear-punto-control"]' class="nav-link">
+                                        <i class="nav-icon bi bi-plus-circle"></i>
+                                        <p>Crear Punto Control</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]='["mostrar-puntocontrol"]' class="nav-link">
+                                        <i class="nav-icon bi bi-eye"></i>
+                                        <p>Mostrar Punto Control</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]='["actualizar-punto-control"]' class="nav-link">
+                                        <i class="nav-icon bi bi-pencil-square"></i>
+                                        <p>Actualizar Punto Control</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]='["eliminar-punto-control"]' class="nav-link">
+                                        <i class="nav-icon bi bi-trash"></i>
+                                        <p>Eliminar Punto Control</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Submenú Registro Ingreso -->
+                        <li class="nav-item"> 
+                            <a href="#" class="nav-link" data-bs-toggle="collapse" data-bs-target="#submenu-registro-ingreso" aria-expanded="false" aria-controls="submenu-registro-ingreso">
+                                <i class="nav-icon bi bi-bank"></i>
+                                <p>Registro Ingresos
+                                    <i class="nav-arrow bi bi-chevron-right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview collapse" id="submenu-registro-ingreso"> 
+                                <li class="nav-item">
+                                    <a [routerLink]='["crear-registroingreso"]' class="nav-link">
+                                        <i class="nav-icon bi bi-plus-circle"></i>
+                                        <p>Crear Registro</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]='["mostrar-registroingreso"]' class="nav-link">
+                                        <i class="nav-icon bi bi-eye"></i>
+                                        <p>Mostrar Registros</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]='["actualizar-registroingreso"]' class="nav-link">
+                                        <i class="nav-icon bi bi-pencil-square"></i>
+                                        <p>Actualizar Registro</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]='["eliminar-registroingreso"]' class="nav-link">
+                                        <i class="nav-icon bi bi-trash"></i>
+                                        <p>Eliminar Registro</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                         <!-- Submenú Usuarios -->
+                         <li class="nav-item"> 
+                            <a href="#" class="nav-link" data-bs-toggle="collapse" data-bs-target="#submenu-usuarios" aria-expanded="false" aria-controls="submenu-usuarios">
+                                <i class="nav-icon bi bi-people-fill"></i>
+                                <p>Usuarios
+                                    <i class="nav-arrow bi bi-chevron-right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview collapse" id="submenu-registro-ingreso"> 
+                                <li class="nav-item">
+                                    <a [routerLink]='["crear-usuarios"]' class="nav-link">
+                                        <i class="nav-icon bi bi-plus-circle"></i>
+                                        <p>Crear Usuario</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]='["mostrar-usuarios"]' class="nav-link">
+                                        <i class="nav-icon bi bi-eye"></i>
+                                        <p>Mostrar Usuarios</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]='["actualizar-registroingreso"]' class="nav-link">
+                                        <i class="nav-icon bi bi-pencil-square"></i>
+                                        <p>Actualizar Usuarios</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]='["eliminar-registroingreso"]' class="nav-link">
+                                        <i class="nav-icon bi bi-trash"></i>
+                                        <p>Eliminar Usuarios</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                       
+                        <!-- Submenú Administrador -->
+                        <li class="nav-item"> 
+                            <a href="#" class="nav-link" data-bs-toggle="collapse" data-bs-target="#submenu-administrador" aria-expanded="false" aria-controls="submenu-administrador">
+                                <i class="nav-icon bi bi-person-gear"></i>
+                                <p>Administrador
+                                    <i class="nav-arrow bi bi-chevron-right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview collapse" id="submenu-administrador"> 
+                                <li class="nav-item">
+                                    <a [routerLink]='["crear-administrador"]' class="nav-link">
+                                        <i class="nav-icon bi bi-plus-circle"></i>
+                                        <p>Crear Administrador</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]='["mostrar-admin"]' class="nav-link">
+                                        <i class="nav-icon bi bi-eye"></i>
+                                        <p>Mostrar Administrador</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]='["actualizar-administrador"]' class="nav-link">
+                                        <i class="nav-icon bi bi-pencil-square"></i>
+                                        <p>Actualizar Administrador</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]='["eliminar-administrador"]' class="nav-link">
+                                        <i class="nav-icon bi bi-trash"></i>
+                                        <p>Eliminar Administrador</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul> <!--end::Sidebar Menu-->
+        </nav>
+        <a href="./index.html" class="brand-link2">
+            <img src="assets/img/uniguajira2.png" alt="Uniguajira Logo" class="brand-image no-style">
+        </a>
+        
+    </div> <!--end::Sidebar Wrapper-->
+   
+</aside>
+
+

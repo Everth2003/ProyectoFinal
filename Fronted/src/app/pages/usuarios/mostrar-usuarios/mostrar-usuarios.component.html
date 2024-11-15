@@ -1,0 +1,46 @@
+<div class="container">
+    <h2>Lista de Usuarios</h2>
+   <!-- Botón para abrir el modal de creación de estudiante con icono -->
+  <button class="btn btn-primary mb-3 me-2" (click)="abrirModalCrearUsuarios()">
+    <i class="bi bi-person-plus"></i> <!-- Icono de Bootstrap Icons -->
+    Crear Usuarios
+  </button>
+  
+    <table class="table table-striped" *ngIf="usuarios && usuarios.length > 0; else noUsuarios">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Usuario</th>
+          <th>Contraseña</th>
+          <th>Nombres</th>
+          <th>Apellidos</th>
+          <th>Email</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let usuario of usuarios">
+          <td>{{ usuario.id }}</td>
+          <td>{{ usuario.username }}</td>
+          <td>{{ usuario.password }}</td>
+          <td>{{ usuario.usuario?.nombres || 'N/A'}}</td>
+          <td>{{ usuario.usuario?.apellidos || 'N/A'}}</td>
+          <td>{{ usuario.usuario?.email  || 'N/A'}}</td>
+          <td>
+            <button (click)="abrirModalActualizarUsuario(usuarios)" class="btn btn-warning me-2">
+                <i class="bi bi-pencil"></i> <!-- Icono de lápiz para actualizar -->
+              </button>
+            
+            <!-- Botón de eliminar con icono -->
+            <button (click)="confirmDelete(usuario.id)" class="btn btn-danger">
+              <i class="bi bi-trash"></i> <!-- Icono de basura para eliminar -->
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <ng-template #noUsuarios>
+      <p>No hay usuarios disponibles.</p>
+    </ng-template>
+  </div>
+  

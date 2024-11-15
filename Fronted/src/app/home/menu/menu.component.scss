@@ -1,0 +1,44 @@
+.menu-container {
+    width: 250px;
+    background-color: #f4f4f4;
+    border-right: 1px solid #ddd;
+    height: 100%;
+ //   color: white;
+  }
+  
+  .ui-panelmenu {
+    width: 100%;
+  }
+
+  .bg-body-secondary {
+    --bs-bg-opacity: 1;
+    background-color: #012933 !important;
+  //  background-color: rgb(19 4 104) !important;
+  }
+
+
+  .brand-text {
+    font-weight: bold;
+    font-size:x-large;
+  }
+
+  .brand-link2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    display: block;
+    display: flex; 
+    justify-content: center;
+    
+}
+
+.no-style {
+    box-shadow: none;          /* Sin sombra */
+    opacity: 1;                /* Opacidad completa */
+    max-width: 300px;          /* Tamaño ajustado */
+    display: inline-block;
+    border: none;
+    margin-top: 70px;
+}

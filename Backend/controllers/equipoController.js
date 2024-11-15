@@ -1,0 +1,1 @@
+const {Equipo}= require('../models/')
